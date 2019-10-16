@@ -1,0 +1,14 @@
+USER: admin
+PASSWORD: 123456
+
+server:
+  port: 9000
+
+spring:
+  application:
+    name: consumer-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${USER}:${PASSWORD}@localhost:10000/eureka/
