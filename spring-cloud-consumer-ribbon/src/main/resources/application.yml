@@ -2,11 +2,11 @@ USER: admin
 PASSWORD: 123456
 
 server:
-  port: 8001
+  port: 9100
 
 spring:
   application:
-    name: provider-server
+    name: consumer-ribbon-client
 
 eureka:
   client:
