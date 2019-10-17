@@ -11,7 +11,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * @Version:      [v1.0.0]
  */
 
-@EnableWebSecurity
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -19,7 +18,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         //因为security默认启用了csrf检验，要在eureka-server服务端配置security的csrf检验为false，
         // eureka-client才能注册
-        http.csrf().disable()
-                .httpBasic();//开启认证
+        http.csrf().disable();
+        http.authorizeRequests()   //认证请求
+                .anyRequest()      //对任何请求
+                .authenticated()   //都需要认证
+                .and()
+                .formLogin();      //使用Spring Security提供的表单登录界面, 开启认证
+                //.httpBasic();    //使用Spring Security提供的httpBasic登录, 开启认证
+
     }
 }
