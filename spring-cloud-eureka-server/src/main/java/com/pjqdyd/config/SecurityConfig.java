@@ -23,8 +23,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()      //对任何请求
                 .authenticated()   //都需要认证
                 .and()
-                .formLogin();      //使用Spring Security提供的表单登录界面, 开启认证
-                //.httpBasic();    //使用Spring Security提供的httpBasic登录, 开启认证
+                .httpBasic();    //使用Spring Security提供的httpBasic登录, 开启认证
+                //.formLogin();  //使用Spring Security提供的表单登录界面, 开启认证 (弃用,表单验证导致客户端服务无法注册)
 
     }
 }
