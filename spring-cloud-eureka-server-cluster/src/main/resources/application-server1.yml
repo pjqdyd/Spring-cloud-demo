@@ -1,0 +1,20 @@
+USER: admin
+PASSWORD: 123456
+
+server:
+  port: 10001
+
+eureka:
+  instance:
+    hostname: server1
+  client:
+    register-with-eureka: false #禁用自己的客户端注册行为
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${USER}:${PASSWORD}@server2:10002/eureka/,http://${USER}:${PASSWORD}@server3:10003/eureka/
+
+spring:
+  security:
+    user:
+      name: ${USER}
+      password: ${PASSWORD}

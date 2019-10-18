@@ -11,6 +11,9 @@ spring:
 eureka:
   client:
     service-url:
+      #单机eureka注册
       defaultZone: http://${USER}:${PASSWORD}@localhost:10000/eureka/
+      #集群eureka注册
+      #defaultZone: http://${USER}:${PASSWORD}@server1:10001/eureka/,http://${USER}:${PASSWORD}@server2:10002/eureka/
   instance:
     prefer-ip-address: true #在eureka中显示ip

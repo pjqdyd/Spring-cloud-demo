@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: eureka-server-cluster
+  #使用不同的配置启动3个eureka实例
+  profiles:
+    #active: server1
+    #active: server2
+    active: server3
+
+
+# 注意在自己电脑的hosts文件中添加, 将服务的hostname指向本机, 模拟集群:
+#  127.0.0.1 server1
+#  127.0.0.1 server2
+#  127.0.0.1 server3
