@@ -14,3 +14,8 @@ eureka:
       defaultZone: http://${USER}:${PASSWORD}@localhost:10000/eureka/
   instance:
     prefer-ip-address: true #在eureka中显示ip
+
+#给指定的服务(PROVIDER-SERVER2)配置负载均衡算法
+PROVIDER-SERVER2:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
