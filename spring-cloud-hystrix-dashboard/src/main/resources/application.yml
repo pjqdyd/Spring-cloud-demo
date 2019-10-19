@@ -1,0 +1,8 @@
+server:
+  port: 20000
+
+
+# 浏览器访问http://localhost:20000/hystrix进入主页
+# 输入要监控的流:
+# 比如启动spring-cloud-consumer-hystrix项目, 输入监控流http://localhost:9000/actuator/hystrix.stream
+# 即可监控, (提示访问几次http://localhost:9000/*下的任意url接口, 面板才有数据, 否则显示Loading..)
