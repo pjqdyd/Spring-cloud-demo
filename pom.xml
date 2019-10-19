@@ -14,6 +14,7 @@
         <module>spring-cloud-eureka-server</module>
         <module>spring-cloud-consumer-ribbon</module>
         <module>spring-cloud-consumer-feign</module>
+        <module>spring-cloud-consumer-hystrix</module>
         <module>spring-cloud-eureka-server-cluster</module>
     </modules>
     <properties>
