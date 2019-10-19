@@ -18,9 +18,15 @@ public class ConsumerFeignController {
 
     @GetMapping("/hi")
     public String hi(){
-
         String s = myFeignClient.sayHiByFeign();
         return s;
     }
+
+    @GetMapping("/hiByName")
+    public String hiByName(){
+        String s = myFeignClient.sayHiByFeignAndName("小明");
+        return s;
+    }
+
 
 }
