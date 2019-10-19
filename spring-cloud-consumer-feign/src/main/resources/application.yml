@@ -12,3 +12,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://${USER}:${PASSWORD}@localhost:10000/eureka/
+
+logging:
+  level:
+    #给指定的FeignClient配置日志级别
+    com.pjqdyd.feign.MyFeignClientWithLog: debug
