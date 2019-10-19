@@ -1,6 +1,7 @@
 package com.pjqdyd.controller;
 
 import com.pjqdyd.feign.MyFeignClient;
+import com.pjqdyd.feign.MyFeignClientByUrl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,9 @@ public class ConsumerFeignController {
     @Autowired
     private MyFeignClient myFeignClient;
 
+    @Autowired
+    private MyFeignClientByUrl myFeignClientByUrl;
+
     @GetMapping("/hi")
     public String hi(){
         String s = myFeignClient.sayHiByFeign();
@@ -28,5 +32,15 @@ public class ConsumerFeignController {
         return s;
     }
 
+    @GetMapping("/hiByUrl")
+    public String hiByUrl(){
+        String s = myFeignClientByUrl.sayHi();
+        return s;
+    }
 
+    @GetMapping("/getServiceInfo")
+    public String getServiceInfo(){
+        String s = myFeignClientByUrl.getServiceInfo();
+        return s;
+    }
 }

@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**   
- * @Description:  [Feign的接口]
+ * @Description:  [Feign的接口, 通过服务名调用服务]
  * @Author:       pjqdyd
  * @Version:      [v1.0.0]
  */
