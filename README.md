@@ -12,7 +12,8 @@
   ├─spring-cloud-consumer               服务消费者端模块
   ├─spring-cloud-consumer-ribbon        服务消费者端Ribbon模块(实现负载均衡)
   ├─spring-cloud-eureka-server-cluster  Eureka集群服务注册中心(高可用集群)
-  ├─spring-cloud-consumer-feign         Feign服务消费者端模块
+  ├─spring-cloud-consumer-feign         Feign服务消费者端模块(对服务实现Restful调用)
+  ├─spring-cloud-consumer-hystrix       Hystrix消费者模块(对服务调用实现熔断限流)
   ├─.gitignore                          .gitignore文件
   ├─README.md                           README.md文件
   └─pom.xml                             父模块pom文件
