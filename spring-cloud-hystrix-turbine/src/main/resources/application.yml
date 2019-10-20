@@ -1,0 +1,29 @@
+USER: admin
+PASSWORD: 123456
+
+server:
+  port: 20001
+
+spring:
+  application:
+    name: hystrix-turbine
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${USER}:${PASSWORD}@localhost:10000/eureka/
+
+turbine:
+  #配置要监控的应用集群
+  aggregator:
+    cluster-config: default
+  app-config: consumer-client-hystrix,consumer-client-hystrix2
+  cluster-name-expression: "'default'"
+
+
+# 1. 启动eureka注册中心
+# 2. 启动consumer-client-hystrix,consumer-client-hystrix2这两个服务
+# 3. 启动hystrix-turbine本应用
+# 4. 再启动hystrix dashboard应用
+# 5. 访问http://localhost:20000/hystrix, 输出要监控的流http://localhost:20001/turbine.stream
+# 6. 即可监控集群, 同样需要访问一下两个服务的接口才有监控数据

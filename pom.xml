@@ -18,6 +18,7 @@
         <module>spring-cloud-consumer-feign-hystrix</module>
         <module>spring-cloud-eureka-server-cluster</module>
         <module>spring-cloud-hystrix-dashboard</module>
+        <module>spring-cloud-hystrix-turbine</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
