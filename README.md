@@ -17,6 +17,7 @@
   ├─spring-cloud-hystrix-dashboard      Hystrix Dashboard监控面板模块
   ├─spring-cloud-hystrix-turbine        Hystrix Turbine多应用监控面板模块
   ├─spring-cloud-consumer-feign-hystrix Feign-Hystrix消费者模块(对服务Restful调用并实现Hystrix熔断)
+  ├─spring-cloud-api-gateway-zuul       Zuul微服务网关模块
   ├─.gitignore                          .gitignore文件
   ├─README.md                           README.md文件
   └─pom.xml                             父模块pom文件
