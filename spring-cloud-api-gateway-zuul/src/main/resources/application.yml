@@ -19,3 +19,16 @@ eureka:
   client:
     service-url:
       defaultZone: http://${USER}:${PASSWORD}@localhost:10000/eureka/
+
+zuul:
+  #配置路由映射
+  routes:
+    provider-server: /ps/** #给指定服务provider-server添加映射地址为/ps
+  #ignored-services: provider-server #取消zuul代理的服务
+
+#zuul:
+#  #配置路由映射路径
+#  routes:
+#    adcdef: #随便写, 但保证唯一
+#      path: /ps/**
+#      serviceId: provider-server
