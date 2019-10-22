@@ -58,3 +58,11 @@ zuul:
       path: /**
     
 ```
+
+```
+#zuul代理了上传文件的接口, 防超时
+hystrix.command.default.exection.isolation.thread.timeoutInMilliseconds: 60000
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+```
