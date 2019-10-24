@@ -1,8 +1,9 @@
 
 #### 几种zuul的配置方式:
+
 1. 默认不配置就是以http://localhost:1000/ [服务名] /**的方式访问接口;
 
-2. 访问http://localhost:1000/routes可以查看zuul的路由规则;
+2. 访问http://localhost:1000/actuator/routes可以查看zuul的路由规则;
 
 ```
 zuul:
