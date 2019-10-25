@@ -1,0 +1,3 @@
+# spring-cloud-config-server读取的配置
+
+profile: profile-default

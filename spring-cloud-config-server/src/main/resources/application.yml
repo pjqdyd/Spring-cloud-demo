@@ -1,0 +1,14 @@
+server:
+  port: 1200
+
+spring:
+  application:
+    name: spring-cloud-config-server
+  #配置配置文件的仓库地址
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/pjqdyd/Spring-cloud-demo
+
+# 启动应用后通过http://localhost:1200/xxx.yml就能获取到配置
