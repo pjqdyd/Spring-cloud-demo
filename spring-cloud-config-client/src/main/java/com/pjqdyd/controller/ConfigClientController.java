@@ -10,9 +10,16 @@ public class ConfigClientController {
     @Value("${profile}")
     private String profile;
 
-    @GetMapping("/profile")
-    public String getProfile(){
-        return profile;
+    @Value("${user-info.username}")
+    private String userName;
+
+    /**
+     * 测试本应用是否成功加载到github的配置
+     * @return
+     */
+    @GetMapping("/configInfo")
+    public String getConfigInfo(){
+        return profile + "-" +userName;
     }
 
 }

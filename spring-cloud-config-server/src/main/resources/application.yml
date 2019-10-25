@@ -10,6 +10,9 @@ spring:
       server:
         git:
           uri: https://github.com/pjqdyd/Spring-cloud-demo
+          #uri: https://github.com/pjqdyd/{application}
+          #配置仓库地址统配符, 当访问http://localhost:1200/myRep-profile.yml时
+          #等同于https://github.com/pjqdyd/myRep
 
 # 启动应用后通过http://localhost:1200/xx-profile.yml就能获取到仓库的默认配置文件了
 # 或者http://localhost:1200/application-profile.yml
