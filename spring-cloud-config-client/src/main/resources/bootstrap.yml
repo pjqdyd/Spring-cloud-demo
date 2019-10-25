@@ -1,0 +1,15 @@
+
+#在application.yml前要加载的配置
+spring:
+  #配置config-server的地址
+  cloud:
+    config:
+      uri: http://localhost:1200
+      label: master #使用git默认master
+      profile: xxx
+  #代表要找name-profile文件, 即application开头的文件
+  application:
+    name: application
+
+# 应用启动后访问http://localhost:1300/profile获取配置信息
+# 即代表本应用已使用到github上的application.yml配置文件

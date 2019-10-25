@@ -1,3 +1,7 @@
 # spring-cloud-config-server读取的配置
 
 profile: profile-default
+
+user-info:
+  username: pjqdyd
+  password: 123456

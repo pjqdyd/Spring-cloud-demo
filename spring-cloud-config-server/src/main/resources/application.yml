@@ -11,4 +11,7 @@ spring:
         git:
           uri: https://github.com/pjqdyd/Spring-cloud-demo
 
-# 启动应用后通过http://localhost:1200/xxx.yml就能获取到配置
+# 启动应用后通过http://localhost:1200/xx-profile.yml就能获取到仓库的默认配置文件了
+# 或者http://localhost:1200/application-profile.yml
+# 或者http://localhost:1200/{filename}-profile.yml
+# http://localhost:1200/default/master也能获取到默认配置
