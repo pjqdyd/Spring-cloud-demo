@@ -14,6 +14,21 @@ spring:
           #配置仓库地址统配符, 当访问http://localhost:1200/myRep-profile.yml时
           #等同于https://github.com/pjqdyd/myRep
 
+#          repos:
+#            #当访问http://localhost:1200/myRep1-profile.yml时执行
+#            myRep1:
+#              uri: https://github.com/pjqdyd/myRep1
+#            #当访问https://github.com/pjqdyd/myRep2*有如下规则时执行
+#            myRep2:
+#              pattern: myRep2*/dev*, myRep2*/test*
+#              uri: https://github.com/pjqdyd/myRep2
+#
+#          search-paths:
+#            - abc #以abc开头的会到abc/目录下找配置,访问http://localhost:1200/abc-profile.yml
+#            - def
+#          #username:
+#          #password:
+
 # 启动应用后通过http://localhost:1200/xx-profile.yml就能获取到仓库的默认配置文件了
 # 或者http://localhost:1200/application-profile.yml
 # 或者http://localhost:1200/{filename}-profile.yml

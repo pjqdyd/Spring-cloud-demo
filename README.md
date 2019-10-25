@@ -19,6 +19,9 @@
   ├─spring-cloud-consumer-feign-hystrix Feign-Hystrix消费者模块(对服务Restful调用并实现Hystrix熔断)
   ├─spring-cloud-api-gateway-zuul       Zuul微服务网关模块
   ├─spring-cloud-proxy-sidecar          Sidecar代理访问其他语言的异构服务
+  ├─spring-cloud-config-server          远程配置服务模块
+  ├─spring-cloud-config-client          远程配置客户端模块
+  ├─application.yml                     测试远程配置的.yml文件
   ├─.gitignore                          .gitignore文件
   ├─README.md                           README.md文件
   └─pom.xml                             父模块pom文件
