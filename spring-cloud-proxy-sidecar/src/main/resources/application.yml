@@ -1,0 +1,27 @@
+USER: admin
+PASSWORD: 123456
+
+server:
+  port: 1001
+
+spring:
+  application:
+    name: proxy-sidecar
+  #当前应用的security配置
+  security:
+    user:
+      name: admin
+      password: 123456
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://${USER}:${PASSWORD}@localhost:10000/eureka/
+
+# 配置其他语言服务的地址, 请求health.json维持心跳, host域名要一致
+sidecar:
+  port: 8060
+  health-uri: http://localhost:8060/health.json
+
