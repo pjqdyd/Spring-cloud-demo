@@ -7,9 +7,21 @@ spring:
       uri: http://localhost:1200
       label: master #使用git默认master
       profile: default
+#      username: #如果config-server开启了security
+#      password:
+#      discovery:
+#        enabled: true
+#        service-id: spring-cloud-config-server #config-server注册到eureka的id
   #代表要找name-profile文件, 即application开头的文件
   application:
     name: application
+
+#如果要注册到eureka
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:10000/eureka/
+
 
 # 本应用启动后访问http://localhost:1300/configInfo测试是否获取到配置信息
 # 即代表本应用已使用到github上的application.yml配置文件
